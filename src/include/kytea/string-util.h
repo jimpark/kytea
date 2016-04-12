@@ -17,6 +17,7 @@
 #ifndef STRING_UTIL_H__
 #define STRING_UTIL_H__
 
+#include <kytea/kytea-dspec.h>
 #include <kytea/kytea-struct.h>
 // #include <kytea/kytea-string.h>
 // #include <iostream>
@@ -27,7 +28,7 @@
 namespace kytea {
 
 // a class for turning std::strings into internal representation
-class StringUtil {
+class KYTEA_API StringUtil {
 
 public:
 
