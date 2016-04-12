@@ -76,7 +76,7 @@ namespace kytea  {
 
 // Map equality checking function
 template <class T>
-void checkMapEqual(const KyteaStringMap<T> & a, const KyteaStringMap<T> & b);
+KYTEA_API void checkMapEqual(const KyteaStringMap<T> & a, const KyteaStringMap<T> & b);
 
 // KyteaTag
 //  a single scored tag candidate
@@ -89,7 +89,7 @@ inline bool operator<(const KyteaTag & a, const KyteaTag & b) {
 
 // KyteaWord
 //  a single word, with multiple lists of candidates for each tag
-class KyteaWord {
+class KYTEA_API KyteaWord {
 public:
     KyteaWord(const KyteaString & s, const KyteaString & n) : surface(s), norm(n), isCertain(true), unknown(false) { }
 
@@ -133,7 +133,7 @@ public:
 
 // KyteaSentence
 //  contains a single sentence with multiple words
-class KyteaSentence {
+class KYTEA_API KyteaSentence {
 
 public:
 

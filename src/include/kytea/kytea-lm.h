@@ -22,7 +22,7 @@
 
 namespace kytea {
 
-class KyteaLM {
+class KYTEA_API KyteaLM {
 
 public:
 

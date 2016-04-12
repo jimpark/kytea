@@ -20,6 +20,7 @@
 #ifndef KYTEA_STRING_H__
 #define KYTEA_STRING_H__
 
+#include <kytea/kytea-dspec.h>
 #include <vector>
 #include <cstddef>
 // #include <stdexcept>
@@ -54,7 +55,7 @@ public:
 
 };
 
-class KyteaString {
+class KYTEA_API KyteaString {
 
 public:
     friend class StringUtil;

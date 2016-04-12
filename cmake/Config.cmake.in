@@ -1,0 +1,7 @@
+@PACKAGE_INIT@
+
+set_and_check(@PROJECT_NAME@_INCLUDE_DIR "@PACKAGE_INSTALL_INC_DIR@")
+set_and_check(@PROJECT_NAME@_INCLUDE_DIRS "@PACKAGE_INSTALL_INC_DIR@")
+
+include("${CMAKE_CURRENT_LIST_DIR}/@TARGETS_EXPORT_NAME@.cmake")
+check_required_components("@PROJECT_NAME@")

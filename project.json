@@ -1,0 +1,10 @@
+{
+    "builder": "cmake",
+    "packages": {
+        "kytea": {"project": "kytea", "path": "."}
+    },
+    "build_order": [
+        "kytea"
+    ]
+}
+

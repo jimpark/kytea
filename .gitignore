@@ -34,3 +34,5 @@ depcomp
 compile
 model.bin
 test-driver
+.build/
+dist/

@@ -23,12 +23,13 @@ class KyteaConfig;
 
 #include <string>
 #include <vector>
+#include <kytea/kytea-dspec.h>
 
 namespace kytea {
 
 class StringUtil;
 
-class KyteaConfig {
+class KYTEA_API KyteaConfig {
 
 private:
 

@@ -17,6 +17,7 @@
 #ifndef KYTEA_H__
 #define KYTEA_H__
 
+#include <kytea/kytea-dspec.h>
 #include <kytea/kytea-config.h>
 #include <kytea/kytea-struct.h>
 #include <vector>
@@ -34,7 +35,7 @@ class KyteaLM;
 class FeatureIO;
 
 // a class representing the main analyzer
-class Kytea {
+class KYTEA_API Kytea {
 
 private:
     friend class KyteaTest;

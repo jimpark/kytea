@@ -32,7 +32,7 @@ class FeatureLookup;
 template <class Entry>
 class Dictionary;
 
-class KyteaModel {
+class KYTEA_API KyteaModel {
 public:
 
     static inline bool isProbabilistic(int solver) {
@@ -146,7 +146,7 @@ public:
 
 };
 
-class TagTriplet {
+class KYTEA_API TagTriplet {
 public:
     std::vector< std::vector<unsigned> > first;
     std::vector<int> second;
