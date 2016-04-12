@@ -23,6 +23,7 @@
 #include <kytea/kytea-dspec.h>
 #include <vector>
 #include <cstddef>
+#include <algorithm>
 // #include <stdexcept>
 // #include <cstring>
 // #include <sstream>
