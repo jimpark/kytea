@@ -4,9 +4,6 @@ set(VERSION "0.4.7")
 
 project(kytea LANGUAGES CXX VERSION ${VERSION})
 
-option(ASM686 "Enable building i686 assembly implementation")
-option(AMD64 "Enable building amd64 assembly implementation")
-
 set(INSTALL_BIN_DIR "${CMAKE_INSTALL_BINDIR}"     CACHE PATH "Installation directory for executables")
 set(INSTALL_LIB_DIR "${CMAKE_INSTALL_LIBDIR}"     CACHE PATH "Installation directory for libraries")
 set(INSTALL_INC_DIR "${CMAKE_INSTALL_INCLUDEDIR}" CACHE PATH "Installation directory for headers")
@@ -17,25 +14,13 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src/include)
 
 if(MSVC)
    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /MP")
+   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /MP")
+
    add_definitions(
        -D_CRT_SECURE_NO_DEPRECATE
        -D_CRT_NONSTDC_NO_DEPRECATE
        -DNOMINMAX)
 
-endif()
-
-if(MSVC)
-   set_target_properties(${STATIC_LIB_NAME} PROPERTIES
-      COMPILE_FLAGS "/Fd\"${CMAKE_CURRENT_BINARY_DIR}/${STATIC_LIB_NAME}.pdb\"")
-
-   set_target_properties(${SHARED_LIB_NAME} PROPERTIES
-      LINK_FLAGS "/PDB:\"${CMAKE_CURRENT_BINARY_DIR}/${SHARED_LIB_NAME}.pdb\"")
-
-   install(
-      FILES ${CMAKE_CURRENT_BINARY_DIR}/${STATIC_LIB_NAME}.pdb
-            ${CMAKE_CURRENT_BINARY_DIR}/${SHARED_LIB_NAME}.pdb
-      DESTINATION ${CMAKE_INSTALL_LIBDIR}
-      CONFIGURATIONS Debug)
 endif()
 
 include(CMakePackageConfigHelpers)
